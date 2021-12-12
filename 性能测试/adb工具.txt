@@ -1,0 +1,142 @@
+adb kill-server
+关闭adb服务
+adb start-server
+启动adb服务
+adb devices
+查询当前连接设备
+
+adb -d install apk文件绝对路径
+安装：-d真机 -e模拟器 -s序列号
+. 保证电脑与android设备为连接状态
+. 多台设备，则需指明安装在哪一台上
+adb -s emulater-62001 install apk文件绝对路径
+
+adb uninstall 软件包名称
+. 软件包的名称不是桌面图标的名称，而是需要其他命令查询。
+
+adb shell pm list packages
+列出当前设备的程序包
+
+adb push 本地路径 远程路径
+把pc的文件或文件夹上传到设备
+
+adb pull 远程路径 本地路径
+把设备上的文件或文件夹下载到pc
+
+adb logcat tag:priority
+在命令行中显示调试信息
+
+adb logcat > 文件名
+将信息保存在文件中
+
+. Android系统有两个日志文件：
+ .. /dev/log/main和/dev/log/system
+ .. 不能直接查看，只能通过输出日志方式查看。
+
+adb logcat tag:priority > 文件名
+. 过滤表达式：tag:priority
+. 如adb logcat 标识：优先级
+ .. 优先级如下
+  ... V —— 明细
+  ... D —— 调试
+  ... I —— 信息
+  ... W —— 警告
+  ... E —— 错误
+  ... F —— 严重错误
+  ... S —— 无记载
+
+adb logcat -v 具体参数选项 > 文件名
+. 控制输出格式：一般需要时间的格式多一些
+  adb logcat -v time
+ .. brief 显示优先级/标记和原始进程的PID
+ .. protcess 仅显示进程PID
+ .. tag 仅显示优先级/标记
+ .. thread 仅显示经常：线程和优先级/标记
+ .. raw 显示原始的日志信息，没有其他的元数据自动
+ .. time 显示日期，调用时间，优先级/标记，PID
+ .. long 显示所有元数据自动并且用空行分隔消息内容
+
+android
+启动SDK管理器
+
+adb bugreport
+查看BUG报告
+
+adb get-serialno
+获取设备的序列号
+
+adb root
+获取root 权限
+
+adb remount
+将system分区从只读变成可写可读（需要root权限）
+
+android list targets
+显示系统内所有android平台
+
+android list avd
+显示系统中所有模拟器
+
+ddms
+启动ddms
+
+adb reboot
+重启
+
+dmesg
+打印出内核的调试信息
+
+Monkey测试
+所有事件随机、无序，只对APP进行性能、稳定性方面的测试
+. 运行特征
+ .. 只对APP应用，具有局限性。
+ .. 事件的类型、运行数量、运行的频率可以设置。
+. 结束特征
+ .. 所有事件运行结束
+ .. 出现崩溃、闪退
+ .. 死机无响应
+ .. 人工干预，强制结束
+
+进入Monkey模式
+. 命令行输入：adb shell
+ . 查看应用列表： pm list packages
+ . 运行指定的APP包n次： monkey -p app包名 n
+ . 日志级别： monkey -p app包名 -v n
+  .. -v 默认详详细度：启动、开始、完成、结果
+  .. -v -v 在1级上，外加Activity的发送消息
+  .. -v -v -v 所有Activity信息
+ . 设定运行时采用相同的随机事件组合：monkey -p app包名 -v -s 随机数 n
+ . 操作事件之间设定延迟：monkey -p app包名 -v -s 随机数 --throttle X毫秒 n
+  .. 模拟用户更真实些
+ . 设定操作事件频率：monkey -p app包名 --pct-事件类型 百分比 n
+ . 常见的操作事件：
+   Touch：触碰
+   Trackball：跟踪球
+   Appswitch：app切换
+   Anyevent：任意事件
+ . monkey命令的参数，没有强制性顺序，可按照帮助列表的顺序记忆并使用。
+
+app异常情况的分析
+1、随机的各种操作，没有任何逻辑和流程
+2、长时间的操作，功能和界面互相调用，消耗大量的系统资源
+3、操作之间的时间间隔太短会造成异常
+
+常见异常及策略
+1.NullPointerException（空指针异常）：  对比APP运行日志，分析代码找出原因。
+2.debug（代表：IllegalStateException）：一般见于程序代码本身的错误。
+3.OutOfMemoryError（低内存异常）：内存空间不足的时候
+4.操作无响应异常（TimeOut）：频繁的操作导致某些功能无响应
+5.RestartSystem（系统重启异常）:可能是误操作，也可能是系统崩溃
+6、RuntimeException（运行时异常）：一般在无响应之后。
+7、ReadException（数据读取异常）：数据库数据读取异常。
+8、IllegalArgumentException（非法参数异常）：方法调用时传递非法错误
+
+常见日志抬头
+（1、ANR（程序无响应）
+（2、Crash（闪退问题）
+（3、exception（异常）
+（4、force closed（强制退出）
+
+
+
+

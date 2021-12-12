@@ -1,0 +1,51 @@
+一、安装pytest框架相关插件
+pytest
+pytest-html(生成html格式的自动化测试报告)
+pytest-xdist(分布式执行，多CPU并发)
+pytest-ordering(用于改变测试用例的执行顺序)
+pytest-rerunfailures(用例失败后重跑)
+allure-pytest(生成美观的测试报告)
+执行如下命令，可批量导入以上插件，需去掉插件后面的中文。
+pip install -r requirements.txt
+
+二、重定义pytest框架部分规则
+/*
+通过读取pytest.ini配置文件运行：
+pytest.ini这个文件是pytest单元测试框架的核心配置文件
+1、位置：一般放在项目的根目录
+2、编码必须是ANSI，可以用notpad+修改编码格式
+3、作用改变pytest默认的行为
+4、运行的规则：不管是主函数的模式运行、命令行的模式运行、都会去读取这个配置文件
+*/
+[pytest]
+addopts = -vs        	#命令行的参数，用空格分隔
+testpachs=./apitest  	#测试用例的相对路径
+python_files=test*.py 	#模块名的规则
+python_classes=Test* 	#类名的规则
+python_functions=test 	#方法名的规则
+
+三、分组执行
+smoke：冒烟测试 分布在各个模块里面
+pytest -vs -m "smoke"
+pytest -vs -m "smoke or usermanage"
+
+四、生成报告
+生成格式：--html 报告路径
+如：--html ./report/report.html
+
+五、conftest.py文件和@pytest.fixture结合实现全局的前置应用（例如：项目的全局登录，模块的全局处理）
+1、conftest.py文件是单独存放的一个夹具配置文件，名称不能更改。
+2、用处：可以在不同的py文件中使用相同的fixture装饰过的函数
+3、原则上conftest.py需要的运行的用例放在同一层，并且不需要做任何import导入的操作
+
+六、结合allure-pytest插件生成allure测试报告
+1、网上下载解压命令行工具
+  .. 网址：https://github.com/allure-framework/allure2/releases
+2、配置windows的path路径 F:\allure-2.17.1\bin
+3、验证allure --version
+4、os.system('allure generate ./temp -o ./report --clean')
+allure generate：固定的命令
+./temp：临时的json格式报告的路径
+ -o：输出output
+./report:生成allure报告的路径
+--clean：清空./report路径原来的报告

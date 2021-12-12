@@ -1,0 +1,292 @@
+URL：http://www.itcast.cn:8080/news/index.html?uid=123&page=1
+协议：http
+域名：www.itcast.cn
+端口：8080 （不是默认，只不过网络通信常用）
+资源路径：/news/index.html
+查询参数：uid=123&page=1   （键值对kv组成，&分隔）
+
+https的端口号为443
+
+客户端请求协议的语法格式：
+请求行：请求方法 URL协议版本
+请求头：k:v
+. User-Agent 描述请求发送端的游览器类型
+. Content-Type 描述请求的类型
+空行：代表请求头结束
+
+请求体：请求发送时携带的数据，由Content-Type的值提供数据类型
+. post和put有请求体
+. get和delete没有请求体
+
+四种请求方法的作用
+. get 查询
+. post 添加 （常用在登录）
+. put 修改
+. delete 删除
+
+服务端响应协议的语法格式：
+响应行：协议版本 状态码 状态描述
+响应头：k:v的语法格式
+. Content-Type:描述响应体中的数据类型
+. Content-Length:响应体的大小。可以不写，游览器自动求取。一旦写了，必须准确。
+空行：代表响应头结束
+响应体：绝大多数不为空（成功回发数据，失败回发错误信息）
+. 回发给客户端的消息内容
+. 数据类型受Content-Type值影响
+. 常见的数据类型：html、普通文本、XML、JSON
+
+
+一个响应包里只会有一个状态码
+状态码：有三种数字组成，第一个数字定义了响应的类别
+. 1xx：代表指示信息。表请求已经被接收，等待继续处理
+. 2xx：代表请求已成功被处理、接收。常见：200/201
+. 3xx：重定向，待访问的资源，需要重新指定路径访问。
+. 4xx：代表客户端错误。常见：404（请求的文件不存在）、403（没有访问文件的权限）
+. 5xx：服务端错误。
+状态码描述：一般与状态码唯一对应。 200--OK  404--file notfound
+
+
+传统风格接口：
+. 请求方法只需要get和post即可
+. URL不唯一，同一个操作对应不同的URL
+. 状态码的使用较单一，200常见
+
+RESTful风格接口：
+. 每个URL代表一种资源
+. 客户端和服务器之间，传递这种资源的某种表现层
+. 客户端通过四个HTTP动词（GET/POST/PUT/DELETE），对服务端资源进行操作："表现层状态转化"
+  .. 表现层：数据的不同表现形式如：图片、文字表现同一个数据对象
+. 接口之间传递的数据最常用格式为JSON
+
+接口文档：
+. 基本信息
+  .. 资源路径（协议和域名在"系统信息"中）
+  .. 请求方法
+  .. 接口描述
+. 请求参数
+  .. 请求头
+     ... Content-Type：请求体的数据类型
+  .. 请求体
+     ... 实现该接口使用的数据及对应类型
+. 返回数据
+  .. 成功：状态码 200
+  .. 失败：错误码（自定义状态码）
+     ... 码值
+     ... 描述信息
+
+接口文档解析：
+. 接口文档的解析本质：从接口文档中，找出http请求所需要的数据信息请求方法
+  .. 主要包含：请求方法、URL、请求头、请求体、响应状态码、描述。
+. 登录为例
+  .. 请求方法：post
+  .. URL：http://ihrm-test.itheima.net/api/sys/login
+  .. 请求头：Content-Type:application/json
+  .. 请求体：{"mobile":"138000000002"","password":"123456"}
+  .. 响应状态码：200
+     ... 错误码：10000 操作成功
+                20001 用户名或面错误
+                99999 系统繁忙
+
+接口测试一共有三个维度
+. 功能测试
+  ..单接口功能
+  ..业务场景：用尽可能少的用例覆盖尽可能多的接口
+. 性能测试
+  .. 响应时长
+  .. 吞吐量
+  .. 兼容性
+  .. 并发数
+  .. 服务器资源使用率
+. 安全测试
+  .. 攻击安全：专业安全测试工程师
+  .. 业务安全：
+     ... 敏感数据是否加密
+     ... SQL注入
+
+手工测试8大要素：
+1、编号
+2、用例名称
+3、模块
+4、优先级
+5、预置条件
+6、测试数据
+7、操作步骤
+8、预期结果
+
+接口测试10大要素
+1、编号
+2、用例名称
+3、模块
+4、优先级
+5、预制条件
+6、请求方法
+7、URL
+8、请求头
+9、请求体
+10、预期结果
+
+接口测试的参数输入通常如下：
+1、正向
+  .. 必选参数
+  .. 可选参数
+  .. 全部参数
+2、反向
+  .. 多参：多了必选参数
+  .. 少参：少了必选参数
+  .. 无参：NULL 没有任何参数
+  .. 错误参数：错误的必选参数
+
+Postman断言借助JavaScript-js语言编写代码，自动判断预期结果与实际结果是否一致。
+1、断言响应状态码
+. pm代表postman的一个实例
+. test()是pm实例的一个方法，有两个参数
+. 参数1，在断言结束后，无论是否通过都给出的文字提示。可以修改"Status code is 200"
+. 参数2，匿名函数 function ()
+  .. pm.response.to.have.status(200)
+     postman的响应结果中应该包含状态码200
+完整句式：
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+2、断言响应体是否包含某个字符串
+. pm代表postman的一个实例
+. test()是pm实例的一个方法，有两个参数
+. 参数1，在断言结束后，无论是否通过都给出的文字提示。可以修改"Status code is 200"
+. 参数2，匿名函数 function ()
+  .. pm.expect(pm.response.text()).to.include("string_you_want_to_search")
+     postman的实例期望响应报文中应该包含XXXX字符串
+完整句式：
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("string_you_want_to_search");
+});
+
+3、断言响应体是否等于某个字符串（对象）
+. pm代表postman的一个实例
+. test()是pm实例的一个方法，有两个参数
+. 参数1，在断言结束后，无论是否通过都给出的文字提示。可以修改"Status code is 200"
+. 参数2，匿名函数 function ()
+  .. pm.response.to.have.body("response_body_string")
+     postman的实例期望响应体应该有 xxxx
+     "response_body_string"代表预期结果
+完整句式：
+pm.test("Body is correct", function () {
+    pm.response.to.have.body("response_body_string");
+});
+
+4、断言JSON数据
+. pm代表postman的一个实例
+. test()是pm实例的一个方法，有两个参数
+. 参数1，在断言结束后，无论是否通过都给出的文字提示。可以修改"Status code is 200"
+. 参数2，匿名函数 function ()
+  .. var jsonData = pm.response.json() 代表响应体的JSON
+     js语法定义了一个变量，jsonData就是变量名
+  .. pm.expect(jsonData.value).to.eql(100)
+     value值对应Json文件的key,eql(100)表示预期key的值为100
+完整句式：
+pm.test("Your test name", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.value).to.eql(100);
+});
+
+5、断言响应头
+. pm代表postman的一个实例
+. test()是pm实例的一个方法，有两个参数
+. 参数1，在断言结束后，无论是否通过都给出的文字提示。可以修改"Status code is 200"
+. 参数2，匿名函数 function ()
+  .. pm.response.to.have.header("Content-Type")
+  可以在header中添加响应头中的key对应的value判定，用','分隔
+pm.test("Content-Type is present", function () {
+    pm.response.to.have.header("Content-Type");
+});
+
+全局变量
+设置：pm.globals.set("全局变量名",变量值)
+获取：
+. 代码方式 pm.globals.get("全局变量名")
+. 界面请求参参数：{{全局变量名}}
+
+环境变量:开发环境、测试环境、生产环境
+设置：pm.environment.set("环境变量名",变量值)
+获取：
+. 代码方式 pm.environment.get("环境变量名")
+. 界面请求参数：{{环境变量名}}
+
+Postman请求前置脚本
+在send发送后，请求前置脚本代码，第一时间被执行，在postman内部实现http请求之前
+
+向百度发送当前的时间戳
+相关代码如下：
+// 拿到时间戳的数据值
+var timestamp = new Date().getTime()
+// 将时间戳设置到全局变量
+pm.globals.set("glb_timestamp",timestamp)
+
+Postman关联
+指多个http请求之间，有数据关联或依赖关系时。
+A接口依赖B接口的数据
+. 向B接口发送http请求，获取数据
+. 将数据设置到全局变量（环境变量）中
+. A接口获取全局变量（环境变量）中的数据值，进行使用
+
+
+
+生成测试报告需要安装插件，最先要安装nodejs文件
+通过cmd命令再安装如下：
+1、npm install -g newman
+2、npm install -g newman-reporter-html
+
+使用newman命令，运行导出的测试集脚本，打开cmd输入：
+小细节：json文件所在路径必须与cmd当前所在路径（通过'盘符:'命令切换）一致，否则会找不到目标文件。
+newman run XXX.json -e 环境变量文件 -d 测试数据文件 -r html --reporter-html-export 测试报告.html
+
+导入外部数据文件（参数化）
+CSV:
+1、优点
+ . 数据组织形式简单，适用于大量数据的场合
+2、缺点
+ . 不支持bool类型数据。（数据被postman读入后，自动添加""包裹bool值）
+ . 不支持多参、少参、无参、无错误参数的接口测试
+ . 不支持复杂数据类型。（如嵌套字典、列表等）
+3、特性
+ . postman循环读取csv文件的每一行数据
+ . postman会自动给所有非数字类型，添加""包裹
+JSON:
+1、优点
+ . 支持bool类型
+ . 支持多参、少参、无参、无错误参数的接口测试
+ . 支持复杂数据类型。（如嵌套字典、列表等）
+2、缺点
+ . 对于相同数据量，json数据文件大小远大于CSV文件
+3、特性
+ . postman循环读取json文件的{}数据
+ . postman要求json格式的数据文件，数据内容最外层必须是[]数组,内部所有数据用{}存储
+ . 建议书写json数据时，无论是不是字符串，都可以用""包裹value值，方便postman执行
+   .. 但其实不符合json语法，数字类型和bool类型不需要双引号。
+
+读取数据文件的数据(一般用做请求/预期结果使用)
+1、请求参数（请求行、请求头、请求体）
+ . 写法：CSV{{字段名}}或JSON{{key}}
+ . 如：{{username}}、{{password}}
+2、代码（断言/q请求前置脚本）使用
+ . 借助postman提供的关键字data.字段名(对应csv文件)/data.key(对应json文件)
+   如：data.username或data.password
+3、强调：一旦代码中替换成参数变量，send就不再能正常获取响应数据。
+ . 数据必须从数据文件中读取， 才能正常发送请求，send不具备读取功能。
+4、选择使用数据文件的用例集，进入Runner页面，导入数据文件，并批量执行。
+5、可在显示postman控制台查看相关请求参数是否正常
+
+借助数据文件，实现"数据驱动"。————有多少条数据，对应就有多少个http请求
+
+:target为路径参数
+如：http:/域名/资源路径/:target
+在postman会自动添加，对应的值需要自己填入，通常为环境变量
+
+token
+. 登录，获取服务端返回的token
+. 在后续请求的请求头加入token即可
+
+签名（sign）
+. 实现机制
+ .. 服务端分发密钥，客户端请求时需要带上该密钥（通常做加密处理，签名）
+ .. 服务端收到客户端请求后要验证签名是否正确或超时

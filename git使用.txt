@@ -1,0 +1,63 @@
+一、git常用命令
+1、设置用户签名（提交代码时验证）：
+    git config --global user.name 用户名
+    git config --global user.email 邮箱
+2、初始化本地库
+    git init
+3、查看本地库状态
+    git status
+3、添加到暂存区
+    git add 文件名
+5、暂存区里删除，工作区仍在的命令：
+    git rm --cached <file>.
+4、提交到本地库
+    git commit -m"日志信息" 文件名
+5、查看历史记录
+    git reflog:引用日志信息
+    git log:详细的日志信息
+6、版本穿梭
+git reset --hard  版本号
+二、git分支命令
+1、创建分支
+    git branch 分支名
+2、查看分支
+    git branch -v
+3、切换分支
+    git checkout
+4、把指定分支合并到当前分支
+    git merge 要被合并的分支名
+5、出现冲突时需要手动合并
+    .. 手动修改文件内容
+    .. 并再次添加到暂存区
+    .. 重新提交到本地库，但不能写文件名
+三、gitHub远程库操作
+1、查看远程库的别名
+    git remote -v
+2、创建远程库的别名
+    git remote 远程库别名
+3、推送
+    git push 远程库别名 分支
+4、拉取
+    git pull 远程库别名 分支
+5、克隆gi
+    git clone 远程库别名 分支
+    会自动做如下操作：拉取代码、初始化本地库、创建别名
+6、团队外协作
+    搜索其他项目+点击fork
+    修改完代码后，发送拉取请求
+四、SSH免密登录
+1、创建SSH公钥
+    ssh-keygen -t rsa -C 1027377500@qq.com
+2、命令行中复制公钥，并添加到gitHub的设置-公钥中
+    cat id_rsa.pub
+五、git_IDEA集成环境
+1、配置忽略文件
+   文件名：XXX.igonre
+   文件内容:*.文件类型
+2、在.gitconfig文件中创建索引内容
+    [core]
+	excludesfile = C:/Users/LHL/git.igonre
+
+
+
+
