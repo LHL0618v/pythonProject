@@ -1,0 +1,195 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "apipytest",
+    "children" : [ {
+      "name" : "test_login",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "test_03",
+          "uid" : "dcd254d70257363c",
+          "parentUid" : "4b8933a4998f9dbe6859c51af6073c06",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639406780328,
+            "stop" : 1639406781329,
+            "duration" : 1001
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_02",
+          "uid" : "3e49fa317fac5d8e",
+          "parentUid" : "4b8933a4998f9dbe6859c51af6073c06",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639406781336,
+            "stop" : 1639406782336,
+            "duration" : 1000
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_01",
+          "uid" : "309387114cf2e513",
+          "parentUid" : "4b8933a4998f9dbe6859c51af6073c06",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1639406782340,
+            "stop" : 1639406782340,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_04",
+          "uid" : "3b17a4bf93e921d0",
+          "parentUid" : "4b8933a4998f9dbe6859c51af6073c06",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639406782350,
+            "stop" : 1639406783350,
+            "duration" : 1000
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "4b8933a4998f9dbe6859c51af6073c06"
+      } ],
+      "uid" : "ed57f812124b69b08efdfb935d26e263"
+    }, {
+      "name" : "test_product",
+      "children" : [ {
+        "name" : "TestProduct",
+        "children" : [ {
+          "name" : "test01[parm01]",
+          "uid" : "7c10e00de0380ebd",
+          "parentUid" : "de99fb5059abba9223f5c8993d52a01e",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639406783362,
+            "stop" : 1639406783363,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ "'成龙'" ]
+        }, {
+          "name" : "test01[parm02]",
+          "uid" : "46161ca7d1edac14",
+          "parentUid" : "de99fb5059abba9223f5c8993d52a01e",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639406783379,
+            "stop" : 1639406783380,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ "'甄子丹'" ]
+        }, {
+          "name" : "test01[parm03]",
+          "uid" : "be29c54fc99b3ce2",
+          "parentUid" : "de99fb5059abba9223f5c8993d52a01e",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639406783391,
+            "stop" : 1639406783391,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ "'蔡依林'" ]
+        }, {
+          "name" : "test02",
+          "uid" : "bb5291a295be1bca",
+          "parentUid" : "de99fb5059abba9223f5c8993d52a01e",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1639406783397,
+            "stop" : 1639406783397,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test03",
+          "uid" : "60e86fba2fe3b8c5",
+          "parentUid" : "de99fb5059abba9223f5c8993d52a01e",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639406783402,
+            "stop" : 1639406783403,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test04",
+          "uid" : "2f5dffaa0bac40ef",
+          "parentUid" : "de99fb5059abba9223f5c8993d52a01e",
+          "status" : "passed",
+          "time" : {
+            "start" : 1639406783406,
+            "stop" : 1639406783406,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "de99fb5059abba9223f5c8993d52a01e"
+      } ],
+      "uid" : "db7c4348027a86c1ab77009494326ffb"
+    } ],
+    "uid" : "b32e23fce15b7301a8017ae26ad20184"
+  } ]
+}

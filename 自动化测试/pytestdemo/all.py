@@ -9,15 +9,13 @@ import os
 4、通过nodeid指定用例运行：nodeid由模块名、分隔符、类名、方法名、函数名组成
  .. 书写格式如：pytest.main(['-vs', './apipytest/test_名.py::类名::test_函数名'])
 """
-
-if __name__ == '__main__':
-    # pytest.main(['-vs', './apipytest/test_login.py', "-n=4"])
-    # pytest.main(['-vs', './apipytest/test_product.py', "--reruns=2"])
-    # pytest.main(['-vs', './apipytest/test_product.py'])
-    # pytest.main(['-vs', './apipytest/test_product.py'])
-    # pytest.main()
-    pytest.main()
-    os.system('allure generate ./apipytest/temp -o ./report --clean')
+# pytest.main(['-vs', './apipytest/test_login.py', "-n=4"])
+# pytest.main(['-vs', './apipytest/test_product.py', "--reruns=2"])
+# pytest.main(['-vs', './apipytest/test_product.py'])
+# pytest.main(['-vs', './apipytest/test_product.py'])
+# pytest.main()
+pytest.main()
+os.system('allure generate ./apipytest/temp -o ./report --clean')
 """
 -s：表示输出调试信息，包括print打印的信息
 -v：显示更详细的信息

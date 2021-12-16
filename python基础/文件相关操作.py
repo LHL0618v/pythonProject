@@ -6,7 +6,7 @@ import os
 # os.remove("xx.txt")
 # 创建张三文件夹
 # os.mkdir("张三")
-# 获取当前路径
+# 获取运行脚本所在路径
 path = (os.getcwd())
 print(path)
 # 切换到上一级路径并获取

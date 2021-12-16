@@ -1,0 +1,194 @@
+{
+  "e9f7180218a6db3d16218057af3311bb" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3e49fa317fac5d8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639406781336,
+        "stop" : 1639406782336,
+        "duration" : 1000
+      }
+    } ]
+  },
+  "ecfd6d65de3334ecc6731b4927183986" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3b17a4bf93e921d0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639406782350,
+        "stop" : 1639406783350,
+        "duration" : 1000
+      }
+    } ]
+  },
+  "f707a9a7483e239809cc6cc0b7c6f8fd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7c10e00de0380ebd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639406783362,
+        "stop" : 1639406783363,
+        "duration" : 1
+      }
+    } ]
+  },
+  "5bc0c069fc9cbdfd9f6f0cde18f97208" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "bb5291a295be1bca",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 版本为1.1.1时跳过",
+      "time" : {
+        "start" : 1639406783397,
+        "stop" : 1639406783397,
+        "duration" : 0
+      }
+    } ]
+  },
+  "de37ea8436073dd3e873985a8ad8df10" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "be29c54fc99b3ce2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639406783391,
+        "stop" : 1639406783391,
+        "duration" : 0
+      }
+    } ]
+  },
+  "510913d18a04ca88ef0237b859556af9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "46161ca7d1edac14",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639406783379,
+        "stop" : 1639406783380,
+        "duration" : 1
+      }
+    } ]
+  },
+  "07ae2c4d62974bff9aa088580d50864a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2f5dffaa0bac40ef",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639406783406,
+        "stop" : 1639406783406,
+        "duration" : 0
+      }
+    } ]
+  },
+  "7dbeb13def87ccc9076b294f663f860d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "60e86fba2fe3b8c5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639406783402,
+        "stop" : 1639406783403,
+        "duration" : 1
+      }
+    } ]
+  },
+  "2e1841b4f7f1b554d2809561e96ec986" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "dcd254d70257363c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639406780328,
+        "stop" : 1639406781329,
+        "duration" : 1001
+      }
+    } ]
+  },
+  "eb041be1f2cc932db11ddf8160215ec0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "309387114cf2e513",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 无条件跳过",
+      "time" : {
+        "start" : 1639406782340,
+        "stop" : 1639406782340,
+        "duration" : 0
+      }
+    } ]
+  }
+}

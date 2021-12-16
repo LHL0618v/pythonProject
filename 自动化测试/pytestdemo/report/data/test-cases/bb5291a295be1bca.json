@@ -1,0 +1,65 @@
+{
+  "uid" : "bb5291a295be1bca",
+  "name" : "test02",
+  "fullName" : "apipytest.test_product.TestProduct#test02",
+  "historyId" : "5bc0c069fc9cbdfd9f6f0cde18f97208",
+  "time" : {
+    "start" : 1639406783397,
+    "stop" : 1639406783397,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: 版本为1.1.1时跳过",
+  "statusTrace" : "('H:\\\\pythonProject\\\\自动化测试\\\\pytestdemo\\\\apipytest\\\\test_product.py', 12, 'Skipped: 版本为1.1.1时跳过')",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.skipif(True, reason='版本为1.1.1时跳过')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "apipytest"
+  }, {
+    "name" : "suite",
+    "value" : "test_product"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProduct"
+  }, {
+    "name" : "host",
+    "value" : "linhailong"
+  }, {
+    "name" : "thread",
+    "value" : "10000-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "apipytest.test_product"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.skipif(True, reason='版本为1.1.1时跳过')" ]
+  },
+  "source" : "bb5291a295be1bca.json",
+  "parameterValues" : [ ]
+}

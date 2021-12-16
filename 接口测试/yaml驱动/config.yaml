@@ -1,0 +1,30 @@
+# 接口请求成功
+- name: 获取鉴权码接口
+  request:
+    url: https://api.weixin.qq.com/cgi-bin/token
+    method: get
+    header:
+      Accept: "*/*"
+      Content-Type: application/json
+    param:
+      grant_type: client_credential
+      appid: wx6b11b3efd1cdc290
+      secret: 106a9c6157c4db5f6029918738f9529d
+    assert:
+      eq:
+        expires_in: 7200
+# appid为空
+- name: 获取鉴权码接口
+  request:
+    url: https://api.weixin.qq.com/cgi-bin/token
+    method: get
+    header:
+      Accept: "*/*"
+      Content-Type: application/json
+    param:
+      grant_type: client_credential
+      secret: 106a9c6157c4db5f6029918738f9529d
+    assert:
+      eq:
+        errcode: 41002
+

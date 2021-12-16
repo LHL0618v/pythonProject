@@ -1,6 +1,12 @@
-﻿pytest
+﻿pytest~=6.2.5
 pytest-html
 pytest-xdist
 pytest-ordering
 pytest-rerunfailures
 allure-pytest
+requests~=2.26.0
+Flask~=2.0.2
+PyMySQL~=1.0.2
+xlwings~=0.25.2
+selenium~=4.1.0
+parameterized~=0.8.1
