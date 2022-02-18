@@ -1,0 +1,121 @@
+{
+  "uid" : "a1f3bce813c43f58",
+  "name" : "test_shouyeget",
+  "fullName" : "send.test_send.TestSend#test_shouyeget",
+  "historyId" : "623143ea18e013c89de2c6fc35043285",
+  "time" : {
+    "start" : 1640535731947,
+    "stop" : 1640535732047,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "clear_yaml",
+    "time" : {
+      "start" : 1640535730232,
+      "stop" : 1640535730233,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "coon_database",
+    "time" : {
+      "start" : 1640535731946,
+      "stop" : 1640535731946,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "coon_database::0",
+    "time" : {
+      "start" : 1640535732048,
+      "stop" : 1640535732048,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "send"
+  }, {
+    "name" : "suite",
+    "value" : "test_send"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSend"
+  }, {
+    "name" : "host",
+    "value" : "linhailong"
+  }, {
+    "name" : "thread",
+    "value" : "23172-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "send.test_send"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2d2c9d4c2931dae0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640535701789,
+        "stop" : 1640535701883,
+        "duration" : 94
+      }
+    }, {
+      "uid" : "9696d82eff871871",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639673164751,
+        "stop" : 1639673164863,
+        "duration" : 112
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a1f3bce813c43f58.json",
+  "parameterValues" : [ ]
+}

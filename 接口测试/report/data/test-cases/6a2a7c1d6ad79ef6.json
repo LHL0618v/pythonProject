@@ -1,0 +1,94 @@
+{
+  "uid" : "6a2a7c1d6ad79ef6",
+  "name" : "test_filepost",
+  "fullName" : "send.test_send.TestSend#test_filepost",
+  "historyId" : "e3e3a571850f6e011994d8c9df256c33",
+  "time" : {
+    "start" : 1640535730821,
+    "stop" : 1640535731932,
+    "duration" : 1111
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "clear_yaml",
+    "time" : {
+      "start" : 1640535730232,
+      "stop" : 1640535730233,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "parentSuite",
+    "value" : "send"
+  }, {
+    "name" : "suite",
+    "value" : "test_send"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSend"
+  }, {
+    "name" : "host",
+    "value" : "linhailong"
+  }, {
+    "name" : "thread",
+    "value" : "23172-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "send.test_send"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "635188eebaa83a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640535700586,
+        "stop" : 1640535701764,
+        "duration" : 1178
+      }
+    }, {
+      "uid" : "e2d6f4615d72b588",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639673163948,
+        "stop" : 1639673164742,
+        "duration" : 794
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "smoke" ]
+  },
+  "source" : "6a2a7c1d6ad79ef6.json",
+  "parameterValues" : [ ]
+}

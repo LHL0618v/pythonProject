@@ -1,0 +1,102 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "send",
+    "children" : [ {
+      "name" : "test_send",
+      "children" : [ {
+        "name" : "TestSend",
+        "children" : [ {
+          "name" : "test_weixinget",
+          "uid" : "5323700b9da62615",
+          "parentUid" : "26383b8844a42879ebb12a41455f5bd6",
+          "status" : "passed",
+          "time" : {
+            "start" : 1640535730234,
+            "stop" : 1640535730513,
+            "duration" : 279
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 2,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_weixinpost",
+          "uid" : "660f00f6f4c4831d",
+          "parentUid" : "26383b8844a42879ebb12a41455f5bd6",
+          "status" : "passed",
+          "time" : {
+            "start" : 1640535730516,
+            "stop" : 1640535730819,
+            "duration" : 303
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 2,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_filepost",
+          "uid" : "6a2a7c1d6ad79ef6",
+          "parentUid" : "26383b8844a42879ebb12a41455f5bd6",
+          "status" : "passed",
+          "time" : {
+            "start" : 1640535730821,
+            "stop" : 1640535731932,
+            "duration" : 1111
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 2,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_shouyeget",
+          "uid" : "a1f3bce813c43f58",
+          "parentUid" : "26383b8844a42879ebb12a41455f5bd6",
+          "status" : "passed",
+          "time" : {
+            "start" : 1640535731947,
+            "stop" : 1640535732047,
+            "duration" : 100
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 2,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_loginpost",
+          "uid" : "9805884d93ab4ec7",
+          "parentUid" : "26383b8844a42879ebb12a41455f5bd6",
+          "status" : "passed",
+          "time" : {
+            "start" : 1640535732054,
+            "stop" : 1640535732125,
+            "duration" : 71
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 2,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "26383b8844a42879ebb12a41455f5bd6"
+      } ],
+      "uid" : "c405ecc99d2316bd47be93e6efcc9290"
+    } ],
+    "uid" : "e564149c64c757dd9f8bafc5021ac8b0"
+  } ]
+}

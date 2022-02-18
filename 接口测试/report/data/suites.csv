@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Dec 27 00:22:11 CST 2021","Mon Dec 27 00:22:12 CST 2021","100","send","test_send","TestSend","","","test_shouyeget",""
+"passed","Mon Dec 27 00:22:12 CST 2021","Mon Dec 27 00:22:12 CST 2021","71","send","test_send","TestSend","","","test_loginpost",""
+"passed","Mon Dec 27 00:22:10 CST 2021","Mon Dec 27 00:22:10 CST 2021","303","send","test_send","TestSend","","","test_weixinpost",""
+"passed","Mon Dec 27 00:22:10 CST 2021","Mon Dec 27 00:22:10 CST 2021","279","send","test_send","TestSend","","","test_weixinget",""
+"passed","Mon Dec 27 00:22:10 CST 2021","Mon Dec 27 00:22:11 CST 2021","1111","send","test_send","TestSend","","","test_filepost",""

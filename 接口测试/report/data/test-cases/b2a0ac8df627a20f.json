@@ -1,0 +1,73 @@
+{
+  "uid" : "b2a0ac8df627a20f",
+  "name" : "test_loginpost",
+  "fullName" : "send.test_send.TestSend#test_loginpost",
+  "historyId" : "cceb063db5f4c14dd42986603c14a018",
+  "time" : {
+    "start" : 1640535701885,
+    "stop" : 1640535701962,
+    "duration" : 77
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "clear_yaml",
+    "time" : {
+      "start" : 1640535699789,
+      "stop" : 1640535699790,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "send"
+  }, {
+    "name" : "suite",
+    "value" : "test_send"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSend"
+  }, {
+    "name" : "host",
+    "value" : "linhailong"
+  }, {
+    "name" : "thread",
+    "value" : "12216-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "send.test_send"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b2a0ac8df627a20f.json",
+  "parameterValues" : [ ]
+}

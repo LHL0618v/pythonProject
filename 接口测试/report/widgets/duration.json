@@ -1,0 +1,51 @@
+[ {
+  "uid" : "a1f3bce813c43f58",
+  "name" : "test_shouyeget",
+  "time" : {
+    "start" : 1640535731947,
+    "stop" : 1640535732047,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9805884d93ab4ec7",
+  "name" : "test_loginpost",
+  "time" : {
+    "start" : 1640535732054,
+    "stop" : 1640535732125,
+    "duration" : 71
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "660f00f6f4c4831d",
+  "name" : "test_weixinpost",
+  "time" : {
+    "start" : 1640535730516,
+    "stop" : 1640535730819,
+    "duration" : 303
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5323700b9da62615",
+  "name" : "test_weixinget",
+  "time" : {
+    "start" : 1640535730234,
+    "stop" : 1640535730513,
+    "duration" : 279
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6a2a7c1d6ad79ef6",
+  "name" : "test_filepost",
+  "time" : {
+    "start" : 1640535730821,
+    "stop" : 1640535731932,
+    "duration" : 1111
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
